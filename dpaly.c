@@ -203,7 +203,10 @@ typedef struct VideoState {
 
 int main(int argc, char **argv)
 {
-
+    avdevice_register_all();
+    avfilter_register_all();
+    av_register_all();
+    avformat_network_init();
 
 
 
