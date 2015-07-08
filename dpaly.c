@@ -207,7 +207,8 @@ int main(int argc, char **argv)
     avfilter_register_all();
     av_register_all();
     avformat_network_init();
-
+    signal(SIGINT , sigterm_handler);
+    signal(SIGTERM, sigterm_handler);
 
 
 }
